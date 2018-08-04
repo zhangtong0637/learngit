@@ -1,0 +1,28 @@
+备注 ：git可以分为 工作区 缓存区 master区 以及远程的github区
+工作区：只本地编辑的文件区域
+缓存区：是git区的一个模块
+master: 是本地git的代码库
+master区的代码可以同步到远程github自己的的账号区
+
+总结
+1.初始化一个Git仓库，使用【git init】 命令
+2.将本地文件提交到 缓存库使用 【git add】命令
+3.将缓存库的 内容 提交到 本地master区 使用【git commit -m "提交注释"】
+4.HEAD 指向的版本就是当前版本，因此，Git可以在历史版本来回穿梭，使用的命令【git reset --hard commit_id】
+5.使用命令【git log】可以查看提交历史，以便决定要回退到哪个版本。
+6.使用命令【git reflog】查看命令历史，可以决定返回到哪个版本。
+7.当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令【git checkout --file】
+8.当你改乱的文件提交到缓存区，想丢掉修改，分为两步，第一步，使用命令【git reset HEAD <file>】,然后按照7进行操作
+9.已经提交到版本库，想要撤回，可以参考4.
+10.删除一个文件 使用命令【git rm】 
+11.要关联一个远程库，使用命令【git remote add origin git@server-name:path/repo-name.git】
+   举个例子吧:连接我的github，使用命令【git remote add origin git@github.com:zhangtong0637/learngit.git】
+12.关联后，使用命令【git push -u origin master】 第一次推送所有分支的内容。
+	此后每次提交，可以使用命令【git push origin master】将commit最新的内容推送到远程github
+13.查看分支，使用命令【git branch】
+14.创建分支，使用命令【git branch <name>】
+15.切换分支，使用命令【git checkout <name>】
+16.创建+切换分支，使用命令【git checkout -b <name>】
+17.合并某分支到当前分支，使用命令【git merge <name>】
+18.删除分支，使用命令【git branch -d <name>】
+19.查看分支合并图，使用命令【git log -graph】
