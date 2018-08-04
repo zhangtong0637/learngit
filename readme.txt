@@ -1,3 +1,5 @@
-Git is a distributed  version control system.
-Git is zhang tong  free software.
-mlgb zhangtong
+public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println("Welcome to my github");
+	}
+}
